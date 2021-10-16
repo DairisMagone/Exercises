@@ -275,9 +275,15 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool More20(int n)
 		{
-			throw new NotImplementedException();
-		}
 
+			if (Math.Abs(n) % 20 == 1 || (Math.Abs(n) % 20 == 2))
+			{
+				return true;
+			}
+
+			return false;
+
+		}
 		/// <summary>
 		/// Return true if the given non-negative number is a multiple of 3 or 5, but not both.
 		/// Use the % "mod" operator
