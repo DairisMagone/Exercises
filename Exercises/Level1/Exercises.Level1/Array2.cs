@@ -133,7 +133,26 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool More14(int[] nums)
 		{
-			throw new NotImplementedException();
+			int numberOfOnes = 0;
+			int numberOfFours = 0;
+
+			foreach (int number in nums)
+			{
+				if (number == 1)
+				{
+					numberOfOnes++;
+				}
+				if (number == 4)
+				{
+					numberOfFours++;
+				}
+				return numberOfOnes > numberOfFours;
+
+			}
+
+			return false;
+
+
 		}
 
 		/// <summary>
