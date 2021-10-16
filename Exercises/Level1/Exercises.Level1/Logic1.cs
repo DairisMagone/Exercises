@@ -342,18 +342,41 @@ namespace Exercises.Level1
 	/// </summary>
 	public bool NearTen(int num)
 	{
-		throw new NotImplementedException();
-	}
+			//================GRIBĒJU ĪSĀK, BET NESANĀK==============
+			//if ((Math.Abs(num) % 10 == 2) || (Math.Abs(num) % 10 == 1))
+			//{
+			//	return true;
+			//}
 
-	/// <summary>
-	/// Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19
-	/// inclusive, are extra lucky. So if either value is a teen, just return 19.
-	/// 
-	/// teenSum(3, 4) → 7
-	/// teenSum(10, 13) → 19
-	/// teenSum(13, 2) → 19
-	/// </summary>
-	public int TeenSum(int a, int b)
+			if ((num % 10 == 8) || (num % 10 == 9))
+
+			{
+				return true;
+			}
+			else if ((num % 10 == 1) || (num % 10 == 2))
+
+			{
+				return true;
+			}
+			else if ((num % 10==0) || (num % 10==0))
+
+			{
+				return true;
+			}
+
+			return false;
+
+		}
+
+		/// <summary>
+		/// Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19
+		/// inclusive, are extra lucky. So if either value is a teen, just return 19.
+		/// 
+		/// teenSum(3, 4) → 7
+		/// teenSum(10, 13) → 19
+		/// teenSum(13, 2) → 19
+		/// </summary>
+		public int TeenSum(int a, int b)
 	{
 		throw new NotImplementedException();
 	}
