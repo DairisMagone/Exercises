@@ -294,7 +294,19 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool Old35(int n)
 		{
-			throw new NotImplementedException();
+			int numDivThree = Math.Abs(n) % 3;
+			int numDivFive = Math.Abs(n) % 5;
+
+			if ((numDivThree == 0) || (numDivFive == 0))
+			{
+				if (numDivThree == numDivFive)
+				{
+					return false;
+				}
+				return true;
+			}
+
+			return false;
 		}
 
 		/// <summary>
