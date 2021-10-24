@@ -215,26 +215,43 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool In1To10(int n, bool outsideMode)
 		{
-			if ((n == 1) || (n == 10))
+			if (!outsideMode)
 			{
-				return true;
+				if ((n <= 10) && (n >= 1))
+				{
+					return true;
+				}
+				return false;
+			}
+			else 
+			{
+				if ((n < 1) || (n >= 10))
+				{
+					return true;
+				}
+				return false;
 			}
 
-			bool isInRange = false;
-			if ((n > 1) && (n < 10))
-			{
-				isInRange = true;
-			}
+			//if ((n == 1) || (n == 10))
+			//{
+			//	return true;
+			//}
 
-			if ((outsideMode == false) && (isInRange == true))
-			{
-				return true;
-			}
-			if ((outsideMode == true) && (isInRange == false))
-			{
-				return true;
-			}
-			return false;
+			//bool isInRange = false;
+			//if ((n > 1) && (n < 10))
+			//{
+			//	isInRange = true;
+			//}
+
+			//if ((outsideMode == false) && (isInRange == true))
+			//{
+			//	return true;
+			//}
+			//if ((outsideMode == true) && (isInRange == false))
+			//{
+			//	return true;
+			//}
+			//return false;
 
 
 		}
