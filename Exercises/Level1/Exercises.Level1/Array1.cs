@@ -152,7 +152,13 @@ namespace Exercises.Level1
 		/// </summary>
 		public int[] Reverse3(int[] nums)
 		{
-			throw new NotImplementedException();
+
+			int[] reverseNums = new int[3];
+			reverseNums[0] = nums[2];
+			reverseNums[1] = nums[1];
+			reverseNums[2] = nums[0];
+
+			return reverseNums;
 		}
 
 		/// <summary>
@@ -165,7 +171,24 @@ namespace Exercises.Level1
 		/// </summary>
 		public int[] MaxEnd3(int[] nums)
 		{
-			throw new NotImplementedException();
+
+			int first = nums[0];
+			int lastIndex = nums.Length - 1;
+			int last = nums[lastIndex];
+
+			var max = nums[0];
+			for (var i = 0; i < nums.Length; i++)
+			{
+				if (nums[i] > nums[0])
+					max = nums[i];
+			}
+			
+
+			int[] maxEnd = new int[3];
+			maxEnd[0] = max;
+			maxEnd[1] = max;
+			maxEnd[2] = max;
+			return maxEnd;
 		}
 
 		/// <summary>
@@ -360,6 +383,18 @@ namespace Exercises.Level1
 		/// </summary>
 		public int MaxTriple(int[] nums)
 		{
+			//int max = nums[0];
+			//for (int i = 0; i < nums.Length; i++)
+			//{
+			//	if (nums[i] > max)
+			//	{
+			//		max = nums[i];
+			//	}
+
+			//}
+
+
+			//return max;
 			throw new NotImplementedException();
 		}
 
