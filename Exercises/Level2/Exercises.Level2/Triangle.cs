@@ -29,7 +29,29 @@ namespace Exercises.Level2
         /// <returns></returns>
         public string[] GetTRiangle(int n)
         {
-            throw new NotImplementedException();
+            var stringArray = new string[n];
+            string spaces = "";
+            string stars = "";
+
+            for (int i = 0; i < n; i++)
+            {
+                spaces = spaces + " ";
+            }
+
+			for (int i = 0; i < n; i++)
+			{
+                if (i == 0)
+                {
+                    stars = "*";
+                }
+                else
+                {
+                    stars = stars + "**";
+                }
+                spaces = spaces.Substring(0, spaces.Length - 1);
+                stringArray[i] = spaces + stars;
+            }
+            return stringArray;
         }
     }
 }

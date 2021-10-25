@@ -142,17 +142,22 @@ namespace Exercises.Level1
 				{
 					numberOfOnes++;
 				}
-				if (number == 4)
+				else if (number == 4)
 				{
 					numberOfFours++;
 				}
-				return numberOfOnes > numberOfFours;
-
 			}
-
-			return false;
-
-
+			//bool result;
+			//if (numberOfFours < numberOfOnes)
+			//{
+			//	result = true;
+			//}
+			//else
+			//{
+			//	result = false;
+			//}
+			bool result = numberOfFours < numberOfOnes;
+			return result;
 		}
 
 		/// <summary>
@@ -167,7 +172,14 @@ namespace Exercises.Level1
 		/// </summary>
 		public int[] FizzArray(int n)
 		{
-			throw new NotImplementedException();
+			int[] newArray = new int[n];
+
+			for (int i = 0; i < n; i++)
+			{
+				newArray[i] = i;
+			}
+
+			return newArray;
 		}
 
 		/// <summary>
@@ -179,7 +191,14 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool Only14(int[] nums)
 		{
-			throw new NotImplementedException();
+			foreach (var num in nums)
+			{
+				if ((num != 1) && (num != 4))
+				{
+					return false;
+				}
+			}
+			return true;
 		}
 
 		/// <summary>
@@ -191,9 +210,15 @@ namespace Exercises.Level1
 		/// fizzArray2(10) → ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 		/// fizzArray2(2) → ["0", "1"]
 		/// </summary>
-		public string[] FizzArray2(int nums)
+		public string[] FizzArray2(int n)
 		{
-			throw new NotImplementedException();
+			string[] newArray = new string[n];
+
+			for (int i = 0; i < newArray.Length; i++)
+			{
+				newArray[i] = i.ToString();
+			}
+			return newArray;
 		}
 
 		/// <summary>
@@ -205,7 +230,24 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool No14(int[] nums)
 		{
-			throw new NotImplementedException();
+			bool hasOnes = false;
+			bool hasFours = false;
+			foreach (var num in nums)
+			{
+				if (num == 1)
+				{
+					hasOnes = true;
+				}
+				if (num == 4)
+				{
+					hasFours = true;
+				}
+			}
+			if ((hasOnes == true) && (hasFours == true))
+			{
+				return false;
+			}
+			return true;
 		}
 
 		/// <summary>

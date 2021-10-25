@@ -117,7 +117,9 @@ namespace Exercises.Level1
 			int sum = 0;
 			for (int i = 0; i < nums.Length; i++)
 			{
-				sum += nums[i];
+				//sum += nums[i]; 
+
+				sum = sum + nums[i];
 			}
 
 			return sum;
@@ -171,24 +173,27 @@ namespace Exercises.Level1
 		/// </summary>
 		public int[] MaxEnd3(int[] nums)
 		{
-
 			int first = nums[0];
 			int lastIndex = nums.Length - 1;
 			int last = nums[lastIndex];
 
-			var max = nums[0];
-			for (var i = 0; i < nums.Length; i++)
+			var max = 0;
+			if (first > last)
 			{
-				if (nums[i] > nums[0])
-					max = nums[i];
+				max = first;
 			}
-			
+			else
+			{
+				max = last;
+			}
 
-			int[] maxEnd = new int[3];
-			maxEnd[0] = max;
-			maxEnd[1] = max;
-			maxEnd[2] = max;
-			return maxEnd;
+			for (int i = 0; i < nums.Length; i++)
+			{
+				//int num = nums[i];
+				//num = max;
+				nums[i] = max;
+			}
+			return nums;
 		}
 
 		/// <summary>
@@ -202,7 +207,28 @@ namespace Exercises.Level1
 		/// </summary>
 		public int Sum2(int[] nums)
 		{
-			throw new NotImplementedException();
+			int sum = 0;
+			
+			if (nums.Length < 2)
+			{
+				//for (int i = 0; i < nums.Length; i++)
+				//{
+				//	var num = nums[i];
+				//	sum += num;
+				//}
+				foreach (var num in nums)
+				{
+					sum += num;
+				}
+				return sum;
+			}
+
+			for (int i = 0; i < 2; i++)
+			{
+				var num = nums[i];
+				sum += num;
+			}
+			return sum;
 		}
 
 		/// <summary>
@@ -215,7 +241,12 @@ namespace Exercises.Level1
 		/// </summary>
 		public int[] MiddleWay(int[] a, int[] b)
 		{
-			throw new NotImplementedException();
+			int[] arrayMid = new int[2] { a[1], b[1] };
+
+			//arrayMid[0] = a[1];
+			//arrayMid[1] = b[1];
+
+			return arrayMid;
 		}
 
 		/// <summary>
