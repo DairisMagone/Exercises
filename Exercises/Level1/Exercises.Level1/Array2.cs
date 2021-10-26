@@ -274,7 +274,26 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool Either24(int[] nums)
 		{
-			throw new NotImplementedException();
+			bool nextToEachotherTwos = false;
+			bool nextToEachotherFours = false;
+
+			foreach (var num in nums)
+			{
+				if ((num == 2) && (num+ 1 == 2))
+				{
+					nextToEachotherTwos = true;
+				}
+				else if ((num == 4) && (num + 1 == 4))
+				{
+					nextToEachotherFours = true;
+				}
+			}
+			if ((nextToEachotherTwos == true) && (nextToEachotherFours == true))
+			{
+				return false;
+			}
+
+			return false;
 		}
 
 		/// <summary>

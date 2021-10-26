@@ -208,7 +208,7 @@ namespace Exercises.Level1
 		public int Sum2(int[] nums)
 		{
 			int sum = 0;
-			
+
 			if (nums.Length < 2)
 			{
 				//for (int i = 0; i < nums.Length; i++)
@@ -259,7 +259,11 @@ namespace Exercises.Level1
 		/// </summary>
 		public int[] MakeEnds(int[] nums)
 		{
-			throw new NotImplementedException();
+			int[] newArray = new int[2];
+			newArray[0] = nums[0];
+			newArray[1] = nums[nums.Length - 1];
+
+			return newArray;
 		}
 
 		/// <summary>
@@ -271,7 +275,16 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool Has23(int[] nums)
 		{
-			throw new NotImplementedException();
+			if ((nums[0] == 2) || (nums[1] == 2))
+			{
+				return true;
+			}
+			if ((nums[0] == 3) || (nums[1] == 3))
+			{
+				return true;
+			}
+			return false;
+
 		}
 
 		/// <summary>
@@ -283,7 +296,15 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool No23(int[] nums)
 		{
-			throw new NotImplementedException();
+			if ((nums[0] == 2) || (nums[1] == 2))
+			{
+				return false;
+			}
+			if ((nums[0] == 3) || (nums[1] == 3))
+			{
+				return false;
+			}
+			return true;
 		}
 
 		/// <summary>
@@ -297,7 +318,11 @@ namespace Exercises.Level1
 		/// </summary>
 		public int[] MakeLast(int[] nums)
 		{
-			throw new NotImplementedException();
+			int n = nums.Length * 2;
+			int[] newArray = new int[n];
+			newArray[newArray.Length - 1] = nums[nums.Length - 1];
+
+			return newArray;
 		}
 
 		/// <summary>
@@ -310,7 +335,25 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool Double23(int[] nums)
 		{
-			throw new NotImplementedException();
+			int countOfTwos = 0;
+			int countOfThrees = 0;
+
+			foreach (var num in nums)
+			{
+				if (num == 2)
+				{
+					countOfTwos = countOfTwos + 1;
+				}
+				if (num == 3)
+				{
+					countOfThrees++;
+				}
+				if ((countOfTwos >= 2) || (countOfThrees >= 2))
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
 		/// <summary>
