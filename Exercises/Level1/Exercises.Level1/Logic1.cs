@@ -223,7 +223,7 @@ namespace Exercises.Level1
 				}
 				return false;
 			}
-			else 
+			else
 			{
 				if ((n < 1) || (n >= 10))
 				{
@@ -424,7 +424,15 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
 		{
-			throw new NotImplementedException();
+			if (isAsleep)
+			{
+				return false;
+			}
+			if (isMorning == true && isMom == false)
+			{
+				return false;
+			}
+			return true;
 		}
 
 		/// <summary>
@@ -440,7 +448,19 @@ namespace Exercises.Level1
 		/// </summary>
 		public int TeaParty(int tea, int candy)
 		{
-			throw new NotImplementedException();
+			if (tea >= 5 && candy >= 5)
+			{
+				if (tea >= candy * 2 || candy >= tea * 2)
+				{
+					return 2;
+				}
+				return 1;
+			}
+			if (tea < 5 || candy < 5)
+			{
+				return 0;
+			}
+			return 0;
 		}
 
 		/// <summary>
@@ -455,6 +475,7 @@ namespace Exercises.Level1
 		public string FizzString(string str)
 		{
 			throw new NotImplementedException();
+
 		}
 
 		/// <summary>
@@ -482,7 +503,12 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool TwoAsOne(int a, int b, int c)
 		{
-			throw new NotImplementedException();
+			if (a + b == c || a + c == b || b + c == a)
+			{
+				return true;
+
+			}
+			return false;
 		}
 
 		/// <summary>

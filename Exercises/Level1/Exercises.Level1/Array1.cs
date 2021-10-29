@@ -155,6 +155,7 @@ namespace Exercises.Level1
 		public int[] Reverse3(int[] nums)
 		{
 
+
 			int[] reverseNums = new int[3];
 			reverseNums[0] = nums[2];
 			reverseNums[1] = nums[1];

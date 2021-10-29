@@ -97,9 +97,15 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool Has22(int[] nums)
 		{
-			throw new NotImplementedException();
+			for (int i = 0; i < nums.Length - 1; i++)
+			{
+				if ((nums[i] == 2) && (nums[i + 1] == 2))
+				{
+					return true;
+				}
+			}
+			return false;
 		}
-
 		/// <summary>
 		/// Given an array of ints, return true if the array contains no 1's and no 3's.
 		/// 
@@ -261,7 +267,28 @@ namespace Exercises.Level1
 		/// </summary>
 		public bool IsEverywhere(int[] nums, int val)
 		{
-			throw new NotImplementedException();
+			for (int i = 0; i < nums.Length - 1; i++)
+			{
+				if ((nums[i] == val) || (nums[i + 1] == val))
+				{
+					continue;
+				}
+				//ja ir continu tad šī rindi;na neizpildās.
+				return false;
+			}
+
+			return true;
+
+			//{
+			//	for (int i = 0; i < nums.Length - 1; i++)
+			//	{
+			//		if (nums[i] != val && nums[i + 1] != val)
+			//		{
+			//			return false;
+			//		}
+			//	}
+
+			//	return true;
 		}
 
 		/// <summary>
@@ -277,22 +304,25 @@ namespace Exercises.Level1
 			bool nextToEachotherTwos = false;
 			bool nextToEachotherFours = false;
 
-			foreach (var num in nums)
+			for (int i = 0; i < nums.Length - 1; i++)
 			{
-				if ((num == 2) && (num+ 1 == 2))
+				if ((nums[i] == 2) && (nums[i + 1] == 2))
 				{
 					nextToEachotherTwos = true;
 				}
-				else if ((num == 4) && (num + 1 == 4))
+				if ((nums[i] == 4) && (nums[i + 1] == 4))
 				{
 					nextToEachotherFours = true;
 				}
 			}
-			if ((nextToEachotherTwos == true) && (nextToEachotherFours == true))
+			if ((nextToEachotherTwos) && (nextToEachotherFours))
 			{
 				return false;
 			}
-
+			if ((nextToEachotherTwos) || (nextToEachotherFours))
+			{
+				return true;
+			}
 			return false;
 		}
 
