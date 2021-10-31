@@ -474,8 +474,24 @@ namespace Exercises.Level1
 		/// </summary>
 		public string FizzString(string str)
 		{
-			throw new NotImplementedException();
+			string strFirstChar = str.Substring(0, 1);
+			string strLastChar = str.Substring(str.Length-1, 1);
 
+			if( (strFirstChar == "f") && (strLastChar == "b"))
+			{
+				return "FizzBuzz";
+			}
+
+			if (strFirstChar == "f")
+			{
+				return "Fizz";
+			}
+			if (strLastChar == "b")
+			{
+				return "Buzz";
+			}
+
+			return str;
 		}
 
 		/// <summary>
@@ -491,7 +507,22 @@ namespace Exercises.Level1
 		/// </summary>
 		public string FizzString2(int n)
 		{
-			throw new NotImplementedException();
+			if (n % 3 == 0 && n % 5 == 0)
+			{
+				return "FizzBuzz!";
+			}
+
+			if (n % 3 == 0)
+			{
+				return "Fizz!";
+			}
+
+			if (n % 5 == 0)
+			{
+				return "Buzz!";
+			}
+
+			return n.ToString()+"!";
 		}
 
 		/// <summary>
